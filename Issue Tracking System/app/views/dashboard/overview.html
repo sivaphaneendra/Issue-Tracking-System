@@ -1,0 +1,43 @@
+<div>
+	<a ui-sref="reports" class="pull-right btn btn-primary btn-outline">Show Tickets List</a>
+	<h3>Dashboard</h3>
+	<div class="jumbotron">
+		<div class="container">
+			<p style="text-align: justify;">
+				An issue tracking system (also ITS, trouble ticket system, support ticket, request management or incident ticket system)
+				is a computer software package that manages and maintains lists of issues, as needed by an organization.</p>
+			<br /><br />
+
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">Users and Roles</h3>
+				</div>
+				<div class="panel-body">
+					<table st-table="usersList" class="table table-striped">
+						<thead>
+							<tr>
+								<th>Username</th>
+								<th>Role</th>
+								<th>Status</th>
+								<th>Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="row in usersList">
+								<td>{{row.username | uppercase}}</td>
+								<td>{{row.role}}</td>
+								<td>{{row.status}}</td>
+								<td>
+									<button type="button" ng-click="removeRow(row)" class="btn btn-sm btn-danger" title="Delete">
+										<i class="glyphicon glyphicon-remove-circle" title="Delete">
+										</i>
+									</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

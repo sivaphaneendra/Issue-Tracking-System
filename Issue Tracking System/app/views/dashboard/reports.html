@@ -1,0 +1,43 @@
+<div>
+	<a ui-sref="overview" class="pull-right btn btn-primary btn-outline">Back to Dashboard</a>
+	<h2>Tickets List</h2>
+	<div class="jumbotron">
+		<div class="container">
+			<label class="col-md-12 label label-danger" ng-show="login.error">{{login.error}}</label>
+			<a ui-sref="ticketDetails" class="btn btn-primary btn-outline">Add a new ticket</a>
+			<br /><br />
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">Tickets</h3>
+				</div>
+				<div class="panel-body">
+					<table st-table="ticketsList" class="table table-striped">
+						<thead>
+							<tr>
+								<th>Title</th>
+								<th>Description</th>
+								<th>Time Stamp</th>
+								<th>Comments</th>
+								<th>Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="row in ticketsList">
+								<td>{{row.title | uppercase}}</td>
+								<td>{{row.description}}</td>
+								<td>{{row.timestamp | date}}</td>
+								<td>{{row.comments}}</td>
+								<td>
+									<button type="button" ng-click="removeRow(row)" class="btn btn-sm btn-danger" title="Delete">
+									<i class="glyphicon glyphicon-remove-circle" title="Delete">
+									</i>
+								</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

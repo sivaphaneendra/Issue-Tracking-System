@@ -1,0 +1,23 @@
+<div class="login-page">
+	<div class="row">
+		<div class="col-md-4 col-lg-4 col-md-offset-4 col-lg-offset-4">
+			<img src="images/flat-avatar.png" class="user-avatar" />
+			<h1>ISSUE TRACKING SYSTEM</h1>
+			<form role="form" name="form" ng-submit="submit()">
+				<div class="form-content">
+					<div class="form-group">
+						<input type="text" class="form-control input-underline input-lg" id="" placeholder="Username" ng-model="login.username" ng-click="login.error=false"
+							required>
+					</div>
+
+					<div class="form-group">
+						<input type="password" class="form-control input-underline input-lg" id="" placeholder="Password" ng-model="login.password"
+							ng-click="login.error=false" required>
+					</div>
+				</div>
+				<label class="col-md-12 label label-danger" ng-show="login.error">{{login.error}}</label>
+				<button type="submit" class="btn btn-white btn-outline btn-lg" ng-disabled="form.$pristine|| form.$invalid">Login</button>
+			</form>
+		</div>
+	</div>
+</div>
