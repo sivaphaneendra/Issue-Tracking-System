@@ -1,6 +1,6 @@
 ## Issue Tracking system - Designed and developed by Siva Phaneendra
 
-Issue Tracking system developed using AngularJS, Bootstrap LESS. Powered by Gulp.
+Issue Tracking system developed using AngularJS, Bootstrap and LESS. Powered by Gulp.
 
 ## Technologies and tools used
 1. Front-end: AngularJS, Bootstrap, LESS and Jasmine-karma (test cases)
